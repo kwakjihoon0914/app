@@ -1,0 +1,17 @@
+version: "3.7"
+
+services:
+  app:
+    image: my-app:latest
+    container_name: my-app
+    environment:
+      - TZ=Asia/Seoul
+#    network_mode: host
+    ports:
+      - 8080:8080
+    volumes:
+      - app:/var/app_home
+
+volumes:
+  app:
+
